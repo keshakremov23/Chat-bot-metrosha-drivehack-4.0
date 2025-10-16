@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>ИИ помощник Метроша</title>
 </head>
-
 <body>
     <div class="header">
-        <h1>Метроша</h1>
+        <img src="logomosgortrans.png" alt="logo">
     </div>
     <div id="chat">
         <div class="message bot-message">
-            <div class="message-sender">Метроша</div>
-            Привет! Я помощник Метроша. Задавай вопросы!
+            <div class="message-header">
+                <img src="logo-metrhosha.png" alt="metrosha" class="avatar">
+                <span class="sender">Метроша</span>
+            </div>
+            <div class="message-text">Привет! Меня зовут Метроша, чем я могу помочь?</div>
         </div>
+        <div class="message user-message">
+            <div class="message-header">
+                <img src="user-avatar.png" alt="user" class="avatar">
+                <span class="sender">Пользователь</span>
+            </div>
+            <div class="message-text">Пока</div>
+        </div>
+        <div class="background"></div>
         <div class="input-container">
-            <input id="message" type="text" placeholder="Введите ваш вопрос..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">Отправить</button>
+            <input type="text" id="message-input" placeholder="Введите...">
+            <button id="send-btn">Отправить</button>
+            <button id="attach-btn"><img src="attach-icon.png" alt="attach"></button>
+            <button id="send-arrow"><img src="send-arrow.png" alt="send"></button>
         </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
